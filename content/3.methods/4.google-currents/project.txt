@@ -1,0 +1,53 @@
+title: Google Currents
+-
+keywords:
+-
+description: Google Currents is an app that allows a user to curate their own collection of favorite publications.
+-
+content:
+## Overview
+[Google Currents](https://www.google.com/producer/currents) is an app that allows you to read your favorite websites as if they were a digital publication. If you have a tablet and have played with apps like [Flipboard](http://flipboard.com/) or [Pulse](https://www.pulse.me/) you might ask "**why is this different than either of those?**"
+
+Currents, unlike both of those apps allows just your content to be view once the user has started reading your publication. That means that they open your "publication" and read your news articles and won't be distracted by someone or something else showing up in their feed.
+
+>@description
+
+In terms of how it works, it certainly has the feel of a digital publication. You can add a custom cover image, add articles manually or by using an RSS feed, make full page ads that link to web content, make different sections of content, and even make photo galleries for articles quite easily.
+
+But trying to customize it further than that was painful.
+
+You have to build your publication in Chrome which meant that the text input fields have no color coding, and are small. The template engine is difficult to use and uses a lot of tags that Google has created. Our graphics intern, who knows enough HTML to be able to create some simple formatting like paragraphs and headings, used it for an hour and felt very frustrated with how restrictive the interface is.
+
+The on screen preview seldom matched the actual device version, which was really annoying.
+
+Articles are organized by the date they are added, and as of yet I have not found how to change that. So if you add the articles manually trying to get them in the right order is very difficult.
+
+One nice thing is the ability to import your content via RSS feed. From my testing it seems that it has to be a certain type of RSS feed or formatted in a way that will be read by Google. Using this method the order at times seemed completely random. If you want to include any images that the RSS importer finds, you will need to have access to your server and add a file that Google provides you, otherwise it will not include the images.
+
+Although it certainly made it much easier to add content using the RSS importer it made it feel less like a publication and more like just your website in a different browser.
+
+Some down sides to Currents were pretty evident the more I started playing with this. Most importantly, If I have multiple issues the user has to add each one by themselves, there is no real way for me to notify them that a new issue has been added.
+
+But most important of all is that it still tied it to someone else's app on a device. 
+
+So while this certainly has potential depending on how you publish it didn't seem to be the best solution for what I was looking for.
+
+-
+pros:
+- Quickly add content by importing from an RSS feed.
+- Multiple device support. Currents runs on Android and iOS, and has version for phones and tablets.
+- Easily create multiple issues.
+- Builds a table of contents for you.
+
+-
+cons:
+- No way to notify users of a new issue to add to their library.
+- Seems more geared to web content that a true digital publication.
+- **Customization is very difficult**.
+- To use image you either have to add them to the library for your publication and use odd Google tags / naming **or** requires you to add a file that Google provides you to your site so that Google knows to crawl your content and you have access to it.
+
+-
+final-thoughts:
+
+## Final Thoughts
+While Google Currents has potential, it doesn't take care of some important issues. Multiple Issue support exist but is cumbersome. There is very little that you can customize about your publication, which means that it looks very similar to all other publications. Even though it feels like a digital publication, after looking at other publications it seems that this is more a fancy RSS reader than something to truly build digital publications. For some the restrictions may be offset by the ease of use so for some this may be exactly what you are looking for.

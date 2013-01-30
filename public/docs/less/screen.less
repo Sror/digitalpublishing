@@ -1,0 +1,1117 @@
+/*
+                           .                                                    
+                         . ..                                                   
+                         .. .                                                   
+                          ZZZ. .                                                
+                          .Z$ZO?                                                
+                         .. .ZZZZ.                                              
+                   ?:  ... ...$ZZ$,                          . . . .            
+                  $Z$=.   ..  . IZZ=.                       .     .             
+                 .Z+ZZ.  .. ~Z?..,ZZ?.                      ~$ZZZZ$.            
+         =~$ZZI .$Z.IZ ...  +ZZ~. .ZZ=  .   . ... ZZ.Z.  :ZZZ$?=:?ZZ~ .         
+         ZZZZZZ+ Z? :Z, ..  ~ZZ+... Z$. Z$..   .  ZZ Z+ 7ZZ. . .. .    .        
+        .ZZZ +ZZ=Z...Z=...  :ZZ+. . ,ZZ$ZZ+  ..   ZZ.ZZ.Z$7= . .  ..  .         
+        .ZZZ .Z$ZZ...Z7  ... ZZ:  .  ZZZZZ+IZ~ .. ZZ.ZZ+ ?ZZZZZZZ= .. .         
+        .ZZI. ZZZZ...ZZ.   . ZZ:. ...ZZZIZIIZZ.   ZZ.ZZZ  .   ,~$Z$Z=           
+         ZZ=  ZZZ7 ..ZZ:   . ZZ=.   =ZZI:ZZ:ZZ   .$Z.$ZZ  =ZZZZ$Z:.ZZ~ .        
+         ZZ:. ZZZ+. .ZZ?.. ..ZZ+ .. ZZ7.=ZZ.ZZZ~..IZ.+ZZ.Z$$,:7$$Z ,ZI          
+        .ZZ  .ZZZ:.  ZZ$..  .ZZ+. .7ZZ,.ZZZ.ZZZZ:.+Z:,Z$~Z$..+ZZ~ ,ZZ, .        
+         ZZ:  ZZZ. . ZZZ. .  ZZ7 .?ZZZ..ZZZIZ?:$Z$:Z, ZZ+ZZ:  .,?Z$Z, .         
+         ZZ:  ZZZ.   ZZZ   . ZZZ ?ZZZZIOZ.ZZZ, .:Z$7. ZZI.ZZZZZZZI.   .         
+        .Z$:..ZZZ .. Z$Z ...:ZZZZZZ.ZZ$Z?..,..........?ZZ............  .        
+         ZZ:. ZZZ   .IZZ:   ZZZZ$7:$~ZZ+~ZZZZZZZZZZZZZI:=ZZZZZZZZZZZZZ          
+         ZZ~  ZZZ .. .Z$ ...ZZZZ,$ZZZ+ZZ$ZZZZZZZZZZZZZZZZZ$ZZZZZZZZZZZ..        
+         =O,..,++ ... .:Z~  7+ .ZZZZZ7IIO7I7ZZ+Z$Z7Z7$$7ZZ7Z=$$$?ZZZZZ .        
+        . .   . .. .  =ZZ~  . ..ZZZZZ=$$.:Z:Z+,~7? ?.II+.Z+ ZI+ ZZZZZZ .        
+         ..   . ... . .:+    .. Z$ZZZ+II.:I,Z . $ 7 +II+Z.=.Z.7?$=Z$ZZ .        
+                             . .ZZZZZZZZZZZ$ZZZZZZZZZZZZZZZZZZZZZZZZZ$ .        
+                              ..ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ.         
+                             . .. .................................... .     
+                             
+
+Copyright © 2013, Digital Publishing - An Overview of New Approaches to Online Publishing 
+by Mike Davis is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported License.
+Based on a work at http://mdavis.in/digitalpublishing.
+........................................................................
+Credits: Content managed by Stacey 2.3.0.
+Slideshows throughout the site use the backflip/jQuery Carousel.
+Site built using Coda 2, Codekit, CSS3, HTML5, and LESS.
+  
+*/ 
+                                                                                
+                                                                          
+                                                                                
+/* !Less */
+
+@mdavisbluegreen: rgb(25,120,126);
+@mdavisbluegreenAlpha: rgba(25,120,126, .7);
+@mdavislightbluegreen: rgb(126, 204, 169);
+
+@textColor: #2F2F2F;
+
+@gradientStart: #e2e2e2;
+@gradientEnd: #FFFFFF; 
+
+.merriweather (){ font-family: Merriweather, serif; }
+
+.roundedCorners (@radius: 4px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+	behavior: url(PIE.htc);
+}
+
+.gradientBackground () {
+	background-image: -webkit-linear-gradient(@gradientStart 0%, @gradientEnd 100%);
+	background-image: -moz-linear-gradient(@gradientStart 0%, @gradientEnd 100%);
+	background-image: -ms-linear-gradient(@gradientStart 0%, @gradientEnd 100%);
+	background-image: -o-linear-gradient(@gradientStart 0%, @gradientEnd 100%);
+	background-image: linear-gradient(@gradientStart 0%, @gradientEnd 100%);
+	filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{gradientStart}',endColorstr='@{gradientEnd}')" !important;
+	background-repeat: repeat-x;
+}
+
+.boxSizing {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.easeall (@time: 0.5s) {
+	-webkit-transition: all @time ease-in-out;
+	-moz-transition: all @time ease-in-out;
+	-o-transition: all @time ease-in-out;
+	transition: all @time ease-in-out;
+}
+
+
+
+
+/* !Layout */
+html, body {
+	height: 100%;
+}
+
+html {
+	.gradientBackground
+}
+
+body {
+	margin: 0px auto;
+	padding: 0px;
+	font-weight: 300;	
+}
+
+#wrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+header {
+	height: 140px;
+	padding-top: 30px;
+	margin-bottom: 50px;
+	position: relative;
+	z-index: 200;
+}
+
+.logo {
+	text-indent: -10000px;
+	width: 250px;
+	height: 145px;
+	display: block;
+	background-image: url(../../images/mdavisDrawingsLogo.png);
+	background-image: none,url(../../images/mdavisDrawingsLogo.svg),url(../../images/space.gif);
+	background-position: top left;
+	background-repeat: no-repeat;
+	margin-top: -10px;
+}
+
+
+div.container{
+	width: 900px;
+	background-color: transparent;
+	
+}
+
+#intro {
+	height: 300px;
+	margin-top: 0px;
+	margin-bottom: -10px;
+	position: relative;
+	z-index: 100;
+	background-image: url(../../images/introBg.jpg);
+	width:100%; 
+	overflow: hidden;
+	background-position: center center;
+	background-size: cover;
+	
+	
+	
+	.introText {
+	.boxSizing;
+	text-align: center;
+	margin: 0;
+	position: relative;
+	z-index: 200;
+	padding-top: 60px;
+	
+	h1 {
+		font-weight: 700;
+		font-size: 5em;
+		margin-bottom: 10px;
+		background-color: rgba(0,0,0,0.5);
+		padding: 20px;
+		color: white;
+
+	}
+	
+	p {
+		.merriweather;
+		color: lighten(@textColor, 20%);
+		font-size: .9em;
+		line-height: 1.5em;
+		margin-bottom: 15px;
+		width: 900px;
+		margin: 0 auto;
+	}
+}
+
+}
+
+h1 {
+	margin: 0px;
+	line-height: .8em;
+	font-size: 3em;
+	margin-top: -5px;
+	font-weight: 300;
+}
+
+.description h1 {
+	/* border-bottom:  1px solid #CCC; */
+	padding-bottom: 10px;
+	margin-bottom: -20px;
+	position: relative;
+	z-index: 100;
+}
+
+h1,h2,h3 {
+	font-weight: 300;
+}
+
+#content div.col {
+
+	h2 {
+	/*border-top: 1px solid #CCC;*/
+	border-bottom: 1px solid #CCC;
+	font-size: 1.5em;
+	}
+	
+	h2:nth-child(n+6) {
+		margin-top: 50px;
+	}
+	
+	p {
+	margin-bottom: 20px;
+	}
+	
+	ol,ul,p {
+	font-size: 1.1em;
+	line-height: 1.5em;
+	}
+}
+
+
+.keywords, .author {
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.by {
+	font-size: .75em;
+}
+
+
+.description {
+
+blockquote {
+		border-top: 1px solid #CCC;
+		border-bottom: 1px solid #CCC;
+		margin: 50px 0 50px 0;
+		padding: 20px;
+		font-size: 1.5em;
+		.merriweather;
+	}
+	
+.prosandcons {
+	.roundedCorners;
+	margin-top: 50px;
+	background: #EEE;
+	padding: 10px;
+	
+	h2 {
+		padding-left: 10px;
+		padding-right: 20px;
+	}
+}
+
+p.date {
+	margin-top: 20px;
+	text-transform: uppercase;
+	font-size: .8em;
+	}
+}
+
+.descriptionContent {
+	margin-top: 40px;
+	color: lighten(@textColor, 20%) !important;
+	line-height: 1.5em;
+}
+
+.media {
+	float: left;
+}
+
+.sidebar {
+	margin-top: 45px;
+	float: right;
+	font-size: .8em;
+	color: @textColor;
+	
+	h2 {
+		border-top: 1px solid #CCC;
+		border-bottom: 1px solid #CCC;
+		padding: 2px 5px;
+	}
+
+}
+
+ul.project-list {
+	width: 930px !important;
+	display: block;
+	clear: both;
+	position: relative;
+	left: -15px;
+	
+	li {
+	width: 300px !important;
+	float: left;
+	display: block;
+	padding-bottom: 10px;
+	margin: 0px 10px 0px 0px !important;
+	
+}	
+}
+
+
+ul.project-list-footer {
+	display: block;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	
+	li {
+	float: left;
+	clear: both;
+	display: block;
+	padding-bottom: 0px;
+	width: 100%;
+	padding: 2px;
+}
+
+li a{
+	padding: 5px;
+}
+
+}
+
+
+a {
+	padding: 10px;
+}
+
+a:hover{
+	.roundedCorners;
+}
+
+
+.content {
+
+}
+
+footer{
+	
+	
+	a {
+		color: #AAA;
+	}
+	
+	a:hover {
+		color: white;
+	}
+}
+
+
+#media {
+	overflow: hidden;
+}
+
+.category {
+	height: 60px;
+	display: block;
+	clear: both;
+/* 	width: 960px; */
+}
+
+.category p {
+	padding: 20px 10px;
+	font-weight: bold;
+}
+
+.categoryDescription {
+	/* border-bottom: 1px solid #ccc; */
+	padding: 20px 0px;
+	margin-bottom: 10px;
+	width: 920px;
+}
+
+.filterNav {
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+#filters {
+	display: inline;
+	margin: 0px;
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: inline;
+		border-right: 1px solid gray;
+		padding: 0 10px;
+	}
+	
+	li:last-child {
+		border: none;
+	}
+}
+
+.thumbnail {
+	width: 300px;
+	height: 225px;
+	overflow: hidden;
+}
+
+.thumbnail a img {
+	position: absolute;
+	top: 307px;
+	left: 0;
+	padding: 0;
+	margin-top: -305px;
+	width: 300px;
+	height: 225px;
+	overflow: hidden;
+	z-index: -1;
+}
+.thumbnail a {
+	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background-color: transparent;
+	display: block;
+	width: 300px;
+  	height: 450px;
+	padding: 170px 0px 0px 0px;
+	position: relative;
+	z-index: 10;
+	margin-left: 0px;
+	color: white;
+	.easeall;
+}
+
+.thumbnail a:hover {
+	padding-top: 0px;
+}
+
+.thumbnailContent {
+	.boxSizing;
+	background-color: rgb(0,0,0); /* IE8 Fallback color */
+	background-color: rgba(0,0,0, 0.8);
+	color: white;
+	width: 300px;
+	height: 230px;
+	padding: 20px;
+	behavior: url(PIE.htc);
+}
+
+
+.thumbnail a span.title {
+	border-bottom: 1px solid white;
+	padding-bottom: 10px;
+	/* width: 260px; */
+	display: block;
+	font-weight: bold;
+	color: white;
+}
+
+.thumbnail a span.description{
+	font-size: .8em;
+	display: block;
+	padding-top: 10px;
+	color: white;
+}
+
+.thumbnail a span.date{
+	color: #999;
+	display: block;
+	text-transform: uppercase;
+	font-size: .8em;
+	position: absolute;
+	bottom: 20px;
+	color: white;
+}
+
+.summary {}
+
+#gallery-info {
+	width: 540px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+#gallery-count {
+	float: left;
+}
+
+#gallery-navigation {
+	float: right;
+}
+
+.vcard p{
+	 margin-bottom: 0px !important;
+	 font-size: 1.25em !important;
+}
+
+#wufoo-m7x2k5 {
+	position: relative;
+	top: -30px;
+}
+
+hr.push{
+	display: block;
+	height: 300px;
+	overflow: hidden;
+	visibility: hidden;
+	clear: both;
+}
+footer {
+	background: url(../../images/footerBackground.png) top left;
+	background-color: #2f2f2f;
+	background-repeat: repeat-x;
+	clear: both;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 250px;
+	padding-top: 25px;
+	font-size: .8em;
+	z-index: 10000;
+	border-top: 1px solid #CCC;
+	outline: 1px solid #EEE;
+	color: #888;
+}
+
+.footerlogo {
+	width: 150px;
+	height: 150px;
+	float: left;
+	background-image: url(../../images/mdavisDrawingsFooterLogo.png);
+	background-image: none,url(../../images/mdavisDrawingsFooterLogo.svg),url(../../images/space.gif);
+}
+
+/*
+	The .container background color rule
+	is for testing purposes only.
+	to ensure that the maximum possible
+	width is being used. Some of the column
+	widths have been adjusted to suit this.
+*/
+/*
+.container {
+	background-color: green;
+}
+*/
+
+/*
+footer span {
+	background-color: aqua;	
+}
+*/
+
+footer span.two {
+	text-align: right;
+	width: 160px;
+}
+
+/* !Navigation */
+
+.nav {
+	position: relative;
+	top: 25px;
+	height: 40px;
+	line-height: 40px;
+	
+}
+
+.nav a:hover {
+	color: darken(@mdavisbluegreen,10%);
+	background: transparent;
+}
+
+.navItems{
+	position: relative;
+	left: 135px;
+}
+
+/* !Suckerfish Main Nav Dropdown */
+
+header {
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	float: left;
+	position: relative;
+	padding: 5px;
+	margin: 0px 20px 0px -5px;
+}
+
+li ul {
+	display: none;
+	position: absolute;
+	top: -50px;
+	left: 0;
+	.roundedCorners;
+	background-color: @mdavisbluegreen;
+	background-color: @mdavisbluegreenAlpha;
+} 
+
+li > ul {
+	top: auto;
+	left: auto;
+	}
+	
+li:hover ul {
+	display: block;
+	/*
+	
+	If you were to move the position of the suckerfish dropdown this is where it would be set.
+	
+	position: absolute;
+	left: -50px;
+	*/
+}
+
+li ul li {
+	width: 200px;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+li ul li a {
+	display: block;
+	width: 160px;
+	height: 20px;
+	margin: 0;
+	color: white !important;
+	line-height: 20px;
+}
+
+li ul li:hover, li ul li a:hover {
+	width: 190px;
+	background-color: @mdavisbluegreen;
+}
+
+ul li a {
+	padding: 5px !important;
+}
+
+}
+
+/* End Suckerfish Main Nav Dropdown */
+
+a.projectTitle {
+	.boxSizing;
+	display: block;
+	width: ;
+	height: 100px;
+	background-color: transparent;
+	float: left;
+	margin-right: 10px;
+}
+
+a.projectTitle:hover {
+	background-color: transparent;
+	color: #888;
+}
+
+.prevArrow{
+	background-image: url(../../images/arrows.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+.prevArrow:hover{
+	background-position: -130px 0px;
+}
+
+.nextArrow{
+	background-image: url(../../images/arrows.png);
+	background-repeat: no-repeat;
+	background-position: -390px 0px;
+}
+
+.nextArrow:hover{
+	background-position: -260px 0px;
+}
+
+
+a.projectTitle span {
+	display: block;
+	padding-top: 55px;
+	visibility: visible;
+}
+
+a.projectTitle:hover span {
+	padding-top: 55px;
+	visibility: visible;
+}
+
+a.projectTitle span em {
+	font-size: .9em;
+	color: #222;
+}
+
+/* !Colors */
+
+::selection {background-color: @mdavisbluegreen; color: white;}
+
+a {
+	color: @mdavisbluegreen;
+	padding: 2px;
+	margin: -2px;
+}
+
+a:hover {
+	color: white;
+	background-color: @mdavisbluegreen;
+}
+
+a.logo:hover {
+	background-color: transparent;
+}
+
+
+header .nav .navItems a {
+	color: #777;
+}
+
+header .nav a:hover {
+	color: white;
+	background-color: @mdavisbluegreen;
+
+}
+
+h1 a:hover{
+	background-color: transparent;
+	color: @mdavisbluegreen;
+}
+
+.description p {
+	
+}
+
+.leftInfo {
+	margin-top: -20px;
+}
+
+.copyright {
+	margin-top: 40px;
+}
+
+
+.credits {
+	border-top: 1px solid #888;
+	padding-top: 5px;
+	width: 600px;
+	float: left;
+	font-size: .95em;
+}
+
+a.atom-rss {
+	background-color: #888;
+	font-weight: bold;
+	color: white;
+	padding: 5px;
+	.roundedCorners
+}
+
+a.atom-rss:hover {
+	background-color: @mdavisbluegreen;
+}
+
+/* !Backflip jQuery Carousel */
+
+.carousel {
+	list-style-type: none;
+	padding: 0;
+}
+
+.carousel-frame {
+	/* overflow: hidden; */
+	position: relative;
+	border-bottom: 1px solid #999;
+}
+
+.carousel-slider {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	/* Trigger hardware acceleration */
+		   -moz-transform: translateZ(0);
+		    -ms-transform: translateZ(0);
+		     -o-transform: translateZ(0);
+		-webkit-transform: translateZ(0);
+		transform:         translateZ(0);
+	width: 100%;
+}
+.carousel-slide {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+/* Prev / next navigation */
+.carousel-nav {
+	margin: 0.5em 0;
+	zoom: 1;
+ 	float: right;
+ 	padding: 5px;
+ 	text-align: right;
+}
+.carousel-nav:before,
+.carousel-nav:after {
+	content: "";
+	display: table;
+}
+.carousel-nav:after {
+	clear: both;
+}
+.carousel-nav span {
+	cursor: pointer;
+	float: left;
+}
+.carousel-nav .carousel-next {
+	color: @mdavisbluegreen;
+	padding: 5px;
+	
+}
+.carousel-nav .carousel-next:hover {
+	color: white;
+	background-color: @mdavisbluegreen;
+	.roundedCorners
+	
+}
+
+.carousel-nav .carousel-prev {
+	color: @mdavisbluegreen;
+	padding: 5px;
+	border-right: 1px solid #999;
+	
+}
+
+.carousel-nav .carousel-prev:after {
+	content: " ";
+	
+}
+.carousel-nav .carousel-prev:hover {
+	color: white;
+	background-color: @mdavisbluegreen;
+	.roundedCorners
+	
+}
+.carousel-nav .state-disabled {
+	color: #999;
+	cursor: default;
+	outline: none;
+}
+
+.carousel-nav .state-disabled:hover {
+	color: #999;
+	cursor: default;
+	outline: none;
+	background: transparent;
+}
+
+/* Counter ("slide x of y") */
+.carousel-counter {
+	margin: 0.5em 0;
+	padding: 10px;
+	border-bottom: 1px solid #999;
+	
+}
+
+/* Handles */
+.carousel-handles {
+	margin: 0.5em auto;
+	text-align: center;
+	padding: 10px;
+	position: absolute;
+	margin-top: -98px;
+	font-size: 12px;
+	width: 600px;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.5);
+}
+
+.carousel-handles span {
+	cursor: pointer;
+	margin: 0 0.2em;
+	padding: 2px 5px;
+	color: white;
+}
+.carousel-handles .state-disabled {
+	color: white;
+	cursor: default;
+	outline: none;
+	padding: 2px 5px;
+}
+.carousel-handles .state-current {
+	color: white;
+	cursor: default;
+	outline: none;
+	background-color: @mdavisbluegreen;
+	padding: 2px 5px;
+	.roundedCorners
+}
+
+/* WePay OverRides */
+
+.wepay-widget-button {
+			-webkit-border-image: none;
+			-webkit-box-shadow: white 0px 1px 0px 0px inset;
+			-webkit-user-select: none;
+			background-color: #F6F6F6;
+			background-image: -webkit-linear-gradient(-90deg, white, #ECECEC);
+			background-repeat: repeat-x;
+			border-bottom-color: lightGrey;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+			border-left-color: lightGrey;
+			border-left-style: solid;
+			border-left-width: 1px;
+			border-right-color: lightGrey;
+			border-right-style: solid;
+			border-right-width: 1px;
+			border-top-color: lightGrey;
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+			border-top-style: solid;
+			border-top-width: 1px;
+			box-shadow: white 0px 1px 0px 0px inset;
+			box-sizing: border-box;
+			color: #777 !important;
+			cursor: pointer;
+			display: inline-block;
+			font-family: 'Proxima', Arial, sans-serif !important;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: normal;
+			height: 30px;
+			letter-spacing: normal;
+			line-height: 18.049999237060547px;
+			margin-bottom: 0px;
+			margin-left: -5px;
+			margin-right: 20px;
+			margin-top: 5px !important;
+			min-width: 75px;
+			outline-color: #777;
+			outline-style: none;
+			outline-width: 0px;
+			padding-bottom: 5px;
+			padding-left: 5px;
+			padding-right: 5px;
+			padding-top: 6px !important;
+			position: static;
+			text-align: center;
+			text-decoration: none;
+			text-shadow: white 0px 1px 0px;
+			top: auto;
+			width: 115px;
+			behavior: url(PIE.htc);
+		}
+
+.addToCartButton, .wepay-green {
+-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.35) !important;
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+background-repeat: repeat-x !important;
+background-color: @mdavislightbluegreen !important;
+background-image: -webkit-linear-gradient(-90deg, @mdavislightbluegreen, @mdavisbluegreen) !important;
+background-image: -moz-linear-gradient(-90deg, @mdavislightbluegreen, @mdavisbluegreen) !important;
+background-image: -ms-linear-gradient(-90deg, @mdavislightbluegreen, @mdavisbluegreen) !important;
+background-image: -o-linear-gradient(-90deg, @mdavislightbluegreen, @mdavisbluegreen) !important;
+background-image: linear-gradient(-90deg, @mdavislightbluegreen, @mdavisbluegreen) !important;
+filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{mdavislightbluegreen}',endColorstr='@{mdavisbluegreen}')" !important;
+color: white !important;
+text-shadow: 1px 0px 0px @mdavisbluegreen !important;
+border: 1px solid darken(@mdavisbluegreen, 15%) !important;
+-webkit-border-image: none;
+-webkit-box-shadow: rgba(255, 255, 255, 0.347656) 0px 1px 0px 0px inset;
+-webkit-user-select: none;
+border-bottom-color: #0C3B3E;
+border-bottom-left-radius: 3px;
+border-bottom-right-radius: 3px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-left-color: #0C3B3E;
+border-left-style: solid;
+border-left-width: 1px;
+border-right-color: #0C3B3E;
+border-right-style: solid;
+border-right-width: 1px;
+border-top-color: #0C3B3E;
+border-top-left-radius: 3px;
+border-top-right-radius: 3px;
+border-top-style: solid;
+border-top-width: 1px;
+box-shadow: rgba(255, 255, 255, 0.347656) 0px 1px 0px 0px inset;
+box-sizing: border-box;
+cursor: pointer;
+display: inline-block;
+font-family: 'Proxima', Arial, sans-serif !important;
+font-size: 14px;
+font-style: normal;
+font-weight: normal;
+height: 40px;
+line-height: 40px;
+letter-spacing: normal;
+line-height: 18.049999237060547px;
+margin-bottom: -2px;
+margin-left: -2px;
+margin-right: -2px;
+margin-top: 10px !important;
+min-width: 150px;
+outline-color: white;
+outline-style: none;
+outline-width: 0px;
+padding-bottom: 10px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 10px !important;
+text-align: center;
+text-decoration: none;
+text-shadow: none !important;
+width: 150px !important;
+behavior: url(PIE.htc);
+}
+
+.addToCartButton:hover, .wepay-green:hover {
+-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.35) !important;
+box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+background-repeat: repeat-x !important;
+background-color: lighten(@mdavislightbluegreen, 8%) !important;
+background-image: -webkit-linear-gradient(-90deg, lighten(@mdavislightbluegreen, 8%), lighten(@mdavisbluegreen, 8%)) !important;
+background-image: -moz-linear-gradient(-90deg, lighten(@mdavislightbluegreen, 8%), lighten(@mdavisbluegreen, 8%)) !important;
+background-image: -ms-linear-gradient(-90deg, lighten(@mdavislightbluegreen, 8%), lighten(@mdavisbluegreen, 8%)) !important;
+background-image: -o-linear-gradient(-90deg, lighten(@mdavislightbluegreen, 8%), lighten(@mdavisbluegreen, 8%)) !important;
+background-image: linear-gradient(-90deg, lighten(@mdavislightbluegreen, 8%), lighten(@mdavisbluegreen, 8%)) !important;
+filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{mdavislightbluegreen}',endColorstr='@{mdavisbluegreen}')" !important;
+color: white !important;
+text-shadow: 1px 0px 0px @mdavisbluegreen !important;
+border: 1px solid darken(@mdavisbluegreen, 15%) !important;
+margin-top: 10px;
+text-shadow: none !important;
+behavior: url(PIE.htc);
+}
+
+.wepay-dialog-close a {
+	font-weight: normal !important;
+	font-family: 'Proxima', Arial, sans-serif !important;
+	text-shadow: none !important;
+	behavior: url(PIE.htc);
+}
+
+
+.wepay-dialog-close a:hover {
+	color: white !important;
+	font-weight: normal !important;
+	font-family: 'Proxima', Arial, sans-serif !important;
+	text-shadow: none !important;
+	behavior: url(PIE.htc);
+}
+
+.wepay-store-widget {
+	background-color: transparent !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.item-price-box {
+	text-align: left !important;
+	background-color: transparent !important;
+}
+
+#wepay-widgets-dialogs-wrapper, .wepay-widget-dialog .wepay-dialog-topbar h2, .widget-stores {
+	font-family: 'Proxima', Arial, sans-serif !important;
+}
+
+/* !JotForm OverRides */
+
+.form-subHeader {
+	color: aqua !important;
+}
+
+/* !AddThis OverRides */
+
+.addthis_toolbox {
+	border-bottom:  1px solid #CCC;
+	padding: 0;
+	padding-bottom: 10px;
+	margin: 0;
+	position: relative;
+	top: -10px;	
+}
+
+.addthis_toolbox a, addthis_toolbox a:hover {
+	background-color: transparent;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+.addthis_button_tweet {
+	width: 75px !important;
+	margin: 0px;	
+}
+
+.addthis_button_facebook_like {
+	width: 70px !important;
+}

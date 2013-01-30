@@ -1,0 +1,12 @@
+title: Introduction
+-
+content: 
+We live in an interesting time. In a time where an entire collection of newspapers, magazines, CDs, and albums can fit onto any number of small and portable devices.
+
+There are ebook readers, smart phones, and tablets. There are so many different devices with so many different operating systems that it starts to look daunting and scary at times.
+
+As designers, web developers, communicators, etc. this poses a very exciting challenge. One in which finding the solution is constantly evolving as new technologies are developed.
+
+Now as more and more people are looking to these devices for their news, entertainment, and general information, how do we take things that are important to how we communicate and prepare them for a ever increasing digital world.
+-
+description:

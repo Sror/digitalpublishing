@@ -1,0 +1,44 @@
+title: Baker Framework
+-
+keywords:
+-
+description: Baker Framework is a HTML5 ebook framework to publish interactive books and magazines on iOS devices using simple open web standards.
+-
+content:
+## Overview
+I came across [Baker](http://bakerframework.com/) while looking for something that would fit into our workflow in the office. Something that I could design and build, but also allow someone else to build or edit without the need for special software.
+
+>@description
+
+Well when you think about what an ePub actually is, and realize that in its simplest form its just a website where each page links to the page before it and after it, building an app or digital publication using Baker seems really easy. The only catch was that to publish it would require a Mac and an Apple Developer account. In comparison to the Adobe DPS, that cost seemed trivial.
+
+The trade for paying less to publish our publications was that we could  really simple tools to create it. We could use a text editor to write the pages. We could use the file system to organize and add the asset files. It seemed like it would work great.
+
+**But how would this work practically?**
+
+The down side was that each page would have to be built individually, one… at… a… time.  We were already doing that for the web site I had in mind, but really it just seemed daunting. How would this really work for a magazine, something that gets published quite often?
+
+Luckily the [Baker site has some examples](http://bakerframework.com/books), that after looking at made me feel like this could totally be worth it. Especially because it solved both the problem of needing to support a library of issues, and the problem of needing something that used no special software.
+
+After playing with the [Overnight Busses Travel Magazine](https://itunes.apple.com/app/overnight-buses-magazine/id493329039) that was built using Baker, I felt like it really was a good solid option. Especially after talking to others in our department about How we build the web version of [*The Engaged Scholar Magazine*](http://engagedscholar.msu.edu/magazine/current/Default.aspx) that we publish.
+-
+pros:
+- It requires no special software to build.
+- It uses the file system to organize stories and assets.
+- It can be deployed on all iOS devices.
+- It has support for multiple issues.
+
+-
+cons:
+- It requires knowledge of HTML, CSS, and Javascript.
+- It requires an Apple Developer account (a $99 per year cost) to publish to the App Store.
+- It requires using Apple Xcode to package and deploy.
+- It only works for iOS devices.
+- It requires you to build each page individually, which is your pages are heavy on graphics and design can be time consuming.
+
+
+-
+final-thoughts:
+
+## Final Thoughts
+I like Baker. I think that it provides the best option in terms of flexibility and cost. We can easily work this into the existing workflow, and, as web developers, we do not have to learn anything new. I don't like that it does restrict us to only serving iOS devices, but there are some tutorial that elude to the idea that this could also be taken and published on the web.

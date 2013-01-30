@@ -1,0 +1,42 @@
+title: Contact
+-
+content:
+<!--
+<div class="vcard">
+<p class="org">M.Davis Drawings</p>
+<p class="adr">
+<span class="street-address">P.O.Box 342</span><br />
+<span class="locality">Bath</span>,
+<span class="region">MI</span>
+<span class="postal-code">48808</span>
+</p>
+</div>
+
+<br />
+
+
+I can be contacted at: <strong>@email</strong>
+
+or by using the form below:
+-->
+
+<div id="wufoo-q7x2r1">
+<!-- Fill out my <a href="http://mdavisdesign.wufoo.com/forms/q7x2r1">online form</a>.-->
+</div>
+<script type="text/javascript">var q7x2r1;(function(d, t) {
+var s = d.createElement(t), options = {
+'userName':'mdavisdesign', 
+'formHash':'q7x2r1', 
+'autoResize':true,
+'height':'517',
+'async':true,
+'header':'show'};
+s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+s.onload = s.onreadystatechange = function() {
+var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+try { q7x2r1 = new WufooForm();q7x2r1.initialize(options);q7x2r1.display(); } catch (e) {}};
+var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+})(document, 'script');</script>
+
+-
+description:

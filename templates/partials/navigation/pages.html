@@ -1,0 +1,20 @@
+foreach $root do
+
+	<ul>
+		<li> <a href="@url">@title</a>
+			if $children do
+			<ul>
+					
+						foreach $children do
+							<li><a href="@url">@title</a></li>
+						endforeach
+					
+			</ul>
+			endif
+		</li>
+	</ul>
+
+endforeach
+
+
+

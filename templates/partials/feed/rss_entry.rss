@@ -1,0 +1,32 @@
+<item>
+   <title>@title</title>
+   <link> http://@base_url/@permalink </link>
+   <dc:creator>Mike Davis</dc:creator>
+   <guid isPermaLink="true"> http://@base_url/@permalink </guid>
+   <category>
+	   <![CDATA[ @keyword ]]>
+   </category>
+   <description>
+
+          if @content do 
+            @content
+          endif
+
+   </description>
+   
+   <content:encoded>
+   	<![CDATA[
+      <p>
+          :feed_images
+          if @content do 
+            @content
+          endif
+      </p>
+      ]]>
+   </content:encoded>
+ 
+   <media:thumbnail url="foreach $images[0:1] do @absolute_url endforeach"/>
+   
+
+   
+</item>

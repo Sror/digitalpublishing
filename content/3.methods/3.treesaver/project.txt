@@ -1,0 +1,57 @@
+title: Treesaver JS
+-
+keywords:
+-
+description: The Treesaver JS Framework is a javascript frame work that creates a magazine-like layout for your site using standards compliant HTML and CSS.
+-
+content:
+
+## Overview
+
+[Treesaver JS](http://treesaverjs.com/) is a javascript framework that instead of putting your content into an app allows your issue or site to have the feel of a magazine right on the web.
+
+This was what I was looking for. Something that felt like a digital publication, something that required no special software, and something that we could all work on.
+Treesaver could take our existing work flow of building individual article pages and turn it into a publication all by adding some javascript files.
+
+Looking at a [demo](http://demo.nomadeditions.com/real-eats/) called [Real Eats](http://demo.nomadeditions.com/real-eats/) made this feel completely doable. It has a table of contents that links to all the articles. It has navigation that can be clicked or tapped. It is completely responsive so that it can be viewed using the same design on a variety of screen sizes. 
+
+Digging further into Treesaver, I found that it creates the pagination for you. So if you have 20 articles all you have to create for the articles are those 20 HTML pages that you would make anyways. The framework controls where to split the content into columns based on the screen size.
+
+Probably one of the coolest things about this is that each article still has its own unique URL. This means you can send a link to someone for an individual article and they can read that article. The great part about this is that because of the format all the other articles are easily accessible without much more work for the user. All they have to do is tap, click, or swipe and they will see all the articles of your issue.
+
+>@description
+
+The more I played with it, I thought how would we do multiple issues? That was already solved for me. We were already doing it on the site. Because this is just a website, each issue can live self contained in its own folder.
+
+So if you visit a URL like this **[engagedscholar.msu.edu/magazine/volume6](http://engagedscholar.msu.edu/magazine/volume6)** you will see volume 6 of the magazine. That gives us the ability to simply change the volume number for our next issue like so: **[engagedscholar.msu.edu/magazine/volume7](http://engagedscholar.msu.edu/magazine/volume7)**. This would take you to see volume 7. This means we can create a nice landing page design with a button that says "read this issue" that will take the user to the table of contents to view the articles.
+
+In terms of a complete solution, this really offers something that would fit into our workflow and provide all the features that a digital publication would have.
+
+
+
+-
+pros:
+
+- Lives on the web so any device, including computers will be able to read your publication the way you've designed it.
+- Easy multiple issue support by just creating a new folder on your site for each issue.
+- Creates pagination for you.
+- Really simple navigation.
+- Because it is just a website make it accessible should be easier than other options.
+- No worries about distribution because it lives on the web.
+
+-
+cons:
+- Offline reading is not possible. Because it lives on the web your readers will have to be connected to the internet to read your publication.
+- There will be a lot of initial customization required
+- If each issue is highly designed it could be quite time consuming to make each issue.
+- Still early in development, which means that things could break, and very little documentation is available.
+
+-
+final-thoughts:
+
+## Final Thoughts
+Treesaver is completely free to download an use, but it is really still just a proof of concept. There is very little documentation yet. They are still building the framework. On your end there is still a lot of set up, and a lot of customization involved if you go through and do this yourself or with your team.
+
+It does offer the most flexibility in terms of the devices it can be viewed on and how much can be done with it. You can easily create multiple issues, you don't have to worry about being in any sort of App store or going through any approval processes. Ultimately if you are currently making an online magazine or print magazine that you then enter the articles into a website, Treesaver is a great option.
+
+For those who don't think that they can go through all the setup that Treesaver requires, do not want to set it up, or do not have the resources to, there is a company called [Savory](http://savory.io) that offers a content management system for $49 a month that uses the Treesaver framework.

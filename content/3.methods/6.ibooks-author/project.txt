@@ -1,0 +1,60 @@
+title: iBooks Author
+-
+keywords:
+-
+description: iBooks Author is free software that is available on the Mac App Store. iBooks Author is an amazing app that allows anyone to create beautiful Multi-Touch textbooks — and just about any other kind of book — for iPad.
+-
+content:
+
+## Overview
+
+After exploring through the Adobe DPS and finding it to expensive to use. Another piece of software came about. [iBooks Author](http://www.apple.com/ibooks-author/). iBooks Author is a free app that you can use to create a variety of books for the iPad. It comes with many built in templates and is quite easy to use. If you have ever used a Mac and and of Apple's iWork apps (Keynote, Pages, and Numbers) iBooks Author feels very much the same and works very similar to them.
+
+----
+
+Now I won't  go into all the details of the controversy about this app. There are plenty of discussions both in the academic and commercial realms that you can google to find out all the details. But the basic problem people had was that when they first read the terms of service it was interpreted as Apple owned your book or publication once you made it using this app.
+
+They have since changed the TOS to better reflect what they actually intended which is if you plan on selling a book created with iBooks Author it needs to be sold through the Apple iBookstore. But just like with all of these technologies, please read the TOS for yourself to know if it is something that works for you or would violate any MSU policies.
+
+----
+
+>@description
+
+The first place I saw this used other than by myself was the **2011 MSU Presidents Report**. It really showed how you could take a document and turn it into a digital publication quite easily. It makes taking something that you already have as a printed piece and quickly rebuild it in iBooks Author.
+
+The application is quite easy to use. You can import existing Microsoft Word or Apple Pages documents to create the text, sections, or chapters that you need for your document. It has the ability to add quizzes and widgets to your pages to create real interactivity.
+
+I used this to create a course pack for a web design class I teach on weekends. It was really easy to make and the best part was that I could add the interactions to the course pack throughout the document. Making a glossary was easy and dividing the content into different chapters or sections was a breeze. I could test it on my iPad by just connecting it to my computer and clicking the preview button. It would send a copy to my iPad and I could play with it there.
+
+When I was finished with the course pack, I was able to export it as an iBook and a PDF. The PDF didn't have any of the interactivity that the iBook does but by doing so I made a version for anyone who didn't have an iPad.
+
+Still there were two things that kept bothering me.
+
+**1. How do I get this to other people?**
+
+If I want to publish this to the iBookstore, I have to register for an iTunes Connect account. Registering for an iTunes connect account is easy, getting approved is much harder. I applied in November 2012 and still haven't heard back from Apple as to wether or not I have been accepted to publish to their store. Turns out, after reading many other blogs and online posts, its like this for many people.
+
+So currently the iBookstore seems to not be a good option. Maybe once I do get accepted it will be easy to publish to it, but for now I will just post the files to my own site.
+
+<br />
+
+**2. How can others use this?**
+
+As much as I like working on a Mac, I know  many people don't, or don't have access to one. So more exploration was necessary.
+-
+pros:
+- It is really easy to use.
+- Quickly build digital textbooks, children's books, course packs, etc.
+- Easy to add interaction.
+
+-
+cons:
+- It is Mac only, so you must have a mac to build the document.
+- It is only for iPad. So when you are done your choices are either an iPad iBook, or a PDF that has no interactivity but can be read by anyone.
+- If you plan to sell your document it can only be sold in the iBookstore. 
+
+
+-
+final-thoughts:
+
+## Final Thoughts

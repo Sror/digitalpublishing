@@ -1,0 +1,49 @@
+title: Adobe DPS
+-
+keywords:
+-
+description: The Adobe Digital Publishing Suite, gives designers the ability to create, develop, and deliver iPad apps such as brochures, portfolios, yearbooks, or annual reports without writing code.
+-
+content:
+
+## Overview
+
+The [Adobe Digital Publishing Suite](http://www.adobe.com/products/digital-publishing-suite-family.html) is a plugin to your existing installation of Adobe InDesign that will allow you to create folio files that you can preview on your own device, and when you are ready to, deploy an app to the Apple App Store.
+
+I first learned about this piece of software after attending a [webinar](http://seminars.adobeconnect.com/p8hxik33sxf/) in which [Ed Madison](http://edmadison.com/) discussed how a journalism class at the [University of Oregon](http://journalism.uoregon.edu/), [developed an iPad magazine](http://journalism.uoregon.edu/students-create-ipad-magazine) over the course of the semester.
+
+>@description
+
+That webinar was the tipping point. It showed how this group of students created iPad digital publication called [OR Magazine](https://itunes.apple.com/us/app/ormagazine/id497535480?mt=8&ign-mpt=uo%3D4). For the first time I realized that taking a publication and making a digital version of it, and not just a PDF, was actually much more possible than I thought.
+
+However the more I looked into it Adobe DPS is really expensive. Not until recently did they release a single user license. They do offer it as part of the Creative Cloud subscription, so if you are using that you have access to the DPS tools for InDesign.
+
+For me this really was what I wanted. I know InDesign, it is one of the applications that I use most often. But the cost just seemed prohibitive.
+
+While considering whether to ask for a subscription to Creative Cloud, or for the DPS software, something occurred to me. Wouldn't it be cool If I could do all that without having to use InDesign? Without having to pay that much money, and also being able to give access to others on our team to the publication?
+
+Thats when I started looking for something different, Something less costly. Something that wouldn't require people to learn how to use InDesign.
+
+-
+pros:
+
+- It is an InDesign plugin so if you know how to use InDesign, building your digital publication will be quite similar to building a print publication.
+- No coding required. If you are not someone who understands code, or you don't really want to learn how, this software will build the apps for you, and walk you through what you need to prepare it for submission into the varying app stores.
+- New publishing option are constantly being added. So you can target more devices by building only one file.
+
+-
+cons:
+- It is very expensive.
+	- $395 for an single license. However this single license should really be interpreted as a per app cost. Each time you want to submit an app to an app store using the single license, you will have to shell out an additional $395. This license also does not include multiple issues per app.
+	- An Adobe Creative Cloud subscription can run anywhere from $29.99 per month to $69.99 per month. And while in the short run this does not seem like a lot, the moment you stop paying the subscription you lose access to your software. More importantly this gives you unlimited app submission, it does not give you multi-issue app support. So each magazine issue would be its own separate app.
+	- The Professional Edition that allows for multiple issues per app is $495 a month.
+	- There is no public pricing for the Enterprise Edition but if it goes the route of the rest of their pricing structure it is probably very expensive.
+
+- Requires knowledge of InDesign.
+
+
+-
+final-thoughts:
+
+## Final Thoughts
+Once you start looking into using the Adobe DPS, while it is very powerful and allows you to create apps without having to know how to code, there are very few positives to using this software. Most notably is the price, however if price is not a concern for you and you don't want to have to deal with coding and preparing app files then this is a good choice.
